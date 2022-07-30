@@ -1,0 +1,255 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+.back {
+  background-color: rgba(0, 0, 0, 0.568);
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.navbar {
+  background-color: rgb(222, 204, 238);
+}
+h1 {
+  font-size: 2rem;
+}
+
+body {
+  background-color: rgb(235, 233, 233);
+  margin-bottom: 6rem;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 3rem;
+}
+.fa-cart-plus {
+  font-size: 2rem;
+  color: rgb(120, 77, 221);
+}
+.cart-items {
+  color: white;
+  background-color: rgb(228, 33, 72);
+  border-radius: 100%;
+  text-align: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  font-size: 1rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 4.1rem;
+  cursor: pointer;
+}
+.cart-btn {
+  cursor: pointer;
+}
+
+.fa-bars {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products-center {
+  padding: 0 2rem;
+  max-width: 117rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+}
+.product-img {
+
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.product {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.product-discription {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+  width: 100%;
+}
+.product-title,
+.product-price {
+  font-size: 1.7rem;
+}
+
+.add-to-cart {
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #a855f7;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.add-to-cart:hover {
+  color: rgb(237, 232, 241);
+  background-color: rgb(136, 48, 148);
+}
+
+/* carts */
+
+.carts {
+  width: 40%;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3rem 0;
+  position: absolute;
+  top: 10%;
+  left: 32%;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(-100vh);
+  z-index: 4;
+}
+.carts__container {
+  max-height: 30rem;
+  overflow: auto;
+}
+.change-btn{
+  background-color: #d8b4fe;
+  color: #a1a1aa;
+}
+.carts h3 {
+  margin-bottom: 6rem;
+  font-size: 3rem;
+}
+.cart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.carts .cart__img img {
+  max-width: 12rem;
+  border-radius: 5px;
+}
+
+.cart .cart__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cart .cart__price {
+  font-size: 1.2rem;
+}
+.fa-angle-up {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.fa-angle-down {
+  color: rgb(241, 47, 57);
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart__numbers {
+  font-size: 1.7rem;
+}
+
+.fa-trash-can {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: crimson;
+}
+
+.carts-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 6rem;
+}
+
+.carts__clear {
+  margin-right: 1rem;
+}
+
+.carts-info .btn {
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid blueviolet;
+  background-color: white;
+  color: blueviolet;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.carts-info .btn:hover {
+  background-color: blueviolet;
+  color: white;
+}
+.carts__total {
+  font-size: 1.7rem;
+}
+
+
+@media screen and (min-width: 768px){
+  h1 {
+    font-size: 4rem;
+  }
+  .fa-bars {
+    font-size: 2rem;
+  }
+  .cart-items {
+    color: white;
+    background-color: rgb(228, 33, 72);
+    border-radius: 100%;
+    text-align: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 4.1rem;
+    cursor: pointer;
+  }
+
+  .fa-cart-plus {
+    font-size: 2.5rem;
+    color: rgb(120, 77, 221);
+  }
+
+}
