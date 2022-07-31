@@ -227,7 +227,7 @@ class Ui {
     // show total price
     let priceOfProducts = 0;
     cart.forEach((p) => {
-      priceOfProducts = priceOfProducts + (p.quantity * p.price);
+      priceOfProducts = priceOfProducts + p.quantity * p.price;
     });
     cartTotalPrice.innerHTML = "$ " + priceOfProducts.toFixed(2);
   }
@@ -253,7 +253,7 @@ class Storage {
 
 cartBtn.addEventListener("click", (e) => {
   carts.style.opacity = "1";
-  carts.style.transform = "translateY(20vh)";
+  carts.style.transform = "translateY(10vh)";
   back.style.display = "block";
 });
 
@@ -280,7 +280,7 @@ carts.addEventListener("click", (e) => {
     cartItems.innerHTML = 0;
 
     //delete showing product(s) in cartList
-    cartsContainer.innerHTML = "";
+    cartsContainer.innerHTML = `<h2 class="product-title">Your Shopping Cart is empty</h2>`;
   }
 });
 
